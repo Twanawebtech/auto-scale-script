@@ -69,8 +69,11 @@ echo '
     # Create an index.php file to add some php code to display the app name.
     cd /mnt/www/html
     touch index.php
-    echo ' <?php $hostname = "App1"; echo $hostname; ?> ' > index.php
+    echo ' <?php echo "Server IP: "; echo $_SERVER["SERVER_ADDR"]; ?> ' > index.php
 
     # Start back PHP service and nginx
     systemctl start php7.0-fpm
     systemctl start nginx
+
+  
+    
