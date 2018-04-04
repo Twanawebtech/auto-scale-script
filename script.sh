@@ -5,10 +5,10 @@
 apt-get update
 
 # Install nginx
-apt-get install nginx
+apt-get install nginx -y whatever
 
 # apt-get -y install php-fpm 
-apt-get -y install php-fpm 
+apt-get -y install php-fpm -y whatever
 
 # Stop PHP service and nginx
 systemctl stop php7.0-fpm
