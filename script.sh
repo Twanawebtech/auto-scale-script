@@ -15,7 +15,7 @@ systemctl stop php7.0-fpm
 systemctl stop nginx
 
 # Replace content
-echo " 
+echo '
         server {
             listen 80 default_server;
             listen [::]:80 default_server;
@@ -53,13 +53,13 @@ echo "
                     log_not_found off;
             }
 
-            # deny access to .htaccess files, if Apache's document root
-            # concurs with nginx's one
+            # deny access to .htaccess files, if Apaches document root
+            # concurs with nginxs one
             location ~ /\.ht {
                     deny all;
             }
         }
-    " > /etc/nginx/sites-available/default
+    ' > /etc/nginx/sites-available/default
 
     # Create a www amd html folder inside the /mnt using
     cd /mnt
